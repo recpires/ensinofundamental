@@ -1,0 +1,235 @@
+/* --- Variáveis --- */
+:root {
+    --primary-blue: #002F5D;
+    --secondary-blue: #004a8f;
+    --accent-teal: #009CA6;
+    --accent-gold: #F4C430; 
+    --text-dark: #222222;
+    --text-light: #555555;
+    --bg-light: #F8F9FA;
+    --bg-white: #FFFFFF;
+    --whatsapp-green: #25D366;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+.container { width: 90%; max-width: 1100px; margin: 0 auto; }
+
+/* --- Header --- */
+.main-header {
+    background-color: var(--bg-white);
+    padding: 1.5rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    text-align: center;
+}
+.header-logo { max-width: 300px; height: auto; }
+
+/* --- Hero Section --- */
+.hero-section {
+    padding: 4rem 0;
+    background: radial-gradient(circle at top left, #eefbfb 0%, #fff 60%);
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+@media(min-width: 768px) {
+    .hero-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .hero-text { flex: 1; padding-right: 2rem; }
+    .hero-image { flex: 1; display: flex; justify-content: flex-end; }
+}
+
+.hero-image img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: -20px 20px 0px var(--accent-teal); /* Sombra Teal para variar */
+    transform: rotate(-1deg);
+}
+
+.badge {
+    background-color: var(--accent-gold);
+    color: var(--primary-blue);
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.page-title {
+    color: var(--primary-blue);
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: var(--accent-teal);
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--accent-gold);
+    padding-left: 1rem;
+}
+
+.cta-button {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: all 0.3s;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0, 47, 93, 0.3);
+}
+.cta-button:hover {
+    background-color: var(--accent-teal);
+    transform: translateY(-3px);
+}
+
+/* --- Objetivos (Cards Grandes) --- */
+.goals-section { padding: 6rem 0; background-color: white; }
+
+.section-header { text-align: center; margin-bottom: 4rem; }
+.section-title { color: var(--primary-blue); font-size: 2.5rem; margin-bottom: 0.5rem; }
+.section-desc { color: #888; font-style: italic; font-size: 1.1rem; }
+
+.goals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.goal-card {
+    background: var(--bg-light);
+    padding: 3rem; /* Padding Grande */
+    border-radius: 16px;
+    transition: all 0.3s;
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+}
+
+.goal-card:hover {
+    background: white;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    transform: translateY(-8px);
+    border-color: white;
+}
+
+.icon-box {
+    width: 80px; height: 80px; /* Ícone Grande */
+    background-color: #e0f7fa; /* Fundo do ícone mais leve */
+    color: var(--primary-blue);
+    font-size: 2rem;
+    border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.goal-card h3 { 
+    color: var(--primary-blue); 
+    margin-bottom: 1.2rem; 
+    font-size: 1.5rem; 
+}
+.goal-card p { 
+    color: var(--text-light); 
+    font-size: 1.1rem; 
+    line-height: 1.7; 
+}
+
+/* --- Destaque --- */
+.highlight-section {
+    background: linear-gradient(135deg, var(--accent-teal), var(--primary-blue));
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+.highlight-content { max-width: 800px; margin: 0 auto; padding: 0 1rem; }
+.highlight-icon { font-size: 3rem; color: var(--accent-gold); margin-bottom: 1.5rem; }
+.highlight-section h3 { font-size: 2rem; margin-bottom: 1rem; }
+.highlight-section p { font-size: 1.1rem; opacity: 0.95; }
+
+/* --- Tabela --- */
+.table-section { padding: 5rem 0; }
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    text-align: center;
+    min-width: 600px; /* Garante que não quebre em telas muito pequenas */
+}
+
+.table-header-main {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.table-subheader th {
+    background-color: var(--accent-gold);
+    color: var(--primary-blue);
+    padding: 1rem;
+    font-weight: 800;
+}
+
+td { padding: 1.2rem; border-bottom: 1px solid #eee; color: var(--text-dark); font-size: 1.05rem; }
+
+/* Estilização da coluna de Nível (Fund I / Fund II) */
+.level-cell {
+    background-color: #f0f4f8;
+    font-weight: 800;
+    color: var(--primary-blue);
+    border-right: 2px solid #fff;
+    vertical-align: middle;
+}
+.level-ii { background-color: #e3effa; } /* Um tom ligeiramente diferente para diferenciar */
+
+.vertical-center { vertical-align: middle; background-color: #fafafa; font-weight: 600; color: var(--text-light); }
+.separator-row td { border-top: 2px solid var(--accent-teal); } /* Linha divisória visual */
+
+/* --- Footer --- */
+.footer-note { text-align: center; padding: 2rem; color: #999; font-size: 0.9rem; }
+.whatsapp-btn {
+    position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px;
+    background-color: var(--whatsapp-green); color: white; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 32px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    text-decoration: none; z-index: 100; transition: transform 0.3s;
+}
+.whatsapp-btn:hover { transform: scale(1.1); }
